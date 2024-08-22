@@ -346,6 +346,29 @@ match_th_load_pair(const struct riscv_opcode *op,
 const struct riscv_opcode riscv_opcodes[] =
 {
 /* name, xlen, isa, operands, match, mask, match_func, pinfo.  */
+{"v2ddef8",     0, INSN_CLASS_I, "d,s,t",     MATCH_V2DDEF8, MASK_V2DDEF8, match_opcode, 0 },
+{"v2ddefu8",    0, INSN_CLASS_I, "d,s,t",     MATCH_V2DDEFU8, MASK_V2DDEFU8, match_opcode, 0 },
+{"v2ddef16",    0, INSN_CLASS_I, "d,s,t",     MATCH_V2DDEF16, MASK_V2DDEF16, match_opcode, 0 },
+{"v2ddefu16",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DDEFU16, MASK_V2DDEFU16, match_opcode, 0 },
+{"v2ddef32",    0, INSN_CLASS_I, "d,s,t",     MATCH_V2DDEF32, MASK_V2DDEF32, match_opcode, 0 },
+{"v2ddefu32",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DDEFU32, MASK_V2DDEFU32, match_opcode, 0 },
+
+{"v2dld",       0, INSN_CLASS_I, "d,o(s)",     MATCH_V2DLD, MASK_V2DLD, match_opcode, 0 },
+{"v2dst",       0, INSN_CLASS_I, "d,o(s)",     MATCH_V2DST, MASK_V2DST, match_opcode, 0 },
+
+{"v2dadd.vv",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DADD_VV, MASK_V2DADD_VV, match_opcode, 0 },
+{"v2dsub.vv",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DSUB_VV, MASK_V2DSUB_VV, match_opcode, 0 },
+{"v2dcnv.vv",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DCNV_VV, MASK_V2DCNV_VV, match_opcode, 0 },
+{"v2ddiv.vv",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DDIV_VV, MASK_V2DDIV_VV, match_opcode, 0 },
+{"v2dmul.vv",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DMUL_VV, MASK_V2DMUL_VV, match_opcode, 0 },
+{"v2dsmul.vv",  0, INSN_CLASS_I, "d,s,t",     MATCH_V2DSMUL_VV, MASK_V2DSMUL_VV, match_opcode, 0 },
+
+{"v2dadd.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DADD_VS, MASK_V2DADD_VS, match_opcode, 0 },
+{"v2dsub.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DSUB_VS, MASK_V2DSUB_VS, match_opcode, 0 },
+{"v2ddiv.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DDIV_VS, MASK_V2DDIV_VS, match_opcode, 0 },
+{"v2dmul.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DMUL_VS, MASK_V2DMUL_VS, match_opcode, 0 },
+
+{"v2dsync",     0, INSN_CLASS_I, "d,o(s)",     MATCH_V2DSYNC, MASK_V2DSYNC, match_opcode, 0 },
 
 /* Standard hints.  */
 {"prefetch.i",  0, INSN_CLASS_ZICBOP, "Wif(s)", MATCH_PREFETCH_I, MASK_PREFETCH_I, match_opcode, 0 },
