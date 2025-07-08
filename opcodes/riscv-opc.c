@@ -371,6 +371,9 @@ const struct riscv_opcode riscv_opcodes[] =
 {"v2dadd.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DADD_VS, MASK_V2DADD_VS, match_opcode, 0 },
 {"v2dsub.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DSUB_VS, MASK_V2DSUB_VS, match_opcode, 0 },
 {"v2ddiv.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DDIV_VS, MASK_V2DDIV_VS, match_opcode, 0 },
+{"v2dsll.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DSLL_VS, MASK_V2DSLL_VS, match_opcode, 0 },
+{"v2dsrl.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DSRL_VS, MASK_V2DSRL_VS, match_opcode, 0 },
+{"v2dsra.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DSRA_VS, MASK_V2DSRA_VS, match_opcode, 0 },
 {"v2dmul.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DMUL_VS, MASK_V2DMUL_VS, match_opcode, 0 },
 
 //{"v2dsync",     0, INSN_CLASS_I, "d,o(s)",     MATCH_V2DSYNC, MASK_V2DSYNC, match_opcode, 0 },
