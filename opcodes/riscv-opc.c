@@ -370,6 +370,8 @@ const struct riscv_opcode riscv_opcodes[] =
 {"v2dsmul.vv",  0, INSN_CLASS_I, "d,s,t",     MATCH_V2DSMUL_VV, MASK_V2DSMUL_VV, match_opcode, 0 },
 {"v2dbc_l.vv",  0, INSN_CLASS_I, "d,s,t",     MATCH_V2DBC_L_VV, MASK_V2DBC_L_VV, match_opcode, 0 },
 {"v2dbc_r.vv",  0, INSN_CLASS_I, "d,s,t",     MATCH_V2DBC_R_VV, MASK_V2DBC_R_VV, match_opcode, 0 },
+{"v2dcm.vv",    0, INSN_CLASS_I, "d,s,t",     MATCH_V2DCM_VV, MASK_V2DCM_VV, match_opcode, 0 },
+{"v2dcmc.vv",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DCMC_VV, MASK_V2DCMC_VV, match_opcode, 0 },
 
 {"v2dadd.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DADD_VS, MASK_V2DADD_VS, match_opcode, 0 },
 {"v2dsub.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DSUB_VS, MASK_V2DSUB_VS, match_opcode, 0 },
@@ -381,6 +383,10 @@ const struct riscv_opcode riscv_opcodes[] =
 {"v2dfft",      0, INSN_CLASS_I, "d,s,t",     MATCH_V2DFFT, MASK_V2DFFT, match_opcode, 0 },
 {"v2difft",     0, INSN_CLASS_I, "d,s,t",     MATCH_V2DIFFT, MASK_V2DIFFT, match_opcode, 0 },
 {"v2dmul.vs",   0, INSN_CLASS_I, "d,s,t",     MATCH_V2DMUL_VS, MASK_V2DMUL_VS, match_opcode, 0 },
+{"v2dntt_r",    0, INSN_CLASS_I, "d,s,t",     MATCH_V2DNTT_R_VS, MASK_V2DNTT_R_VS, match_opcode, 0 },
+{"v2dntt_c",    0, INSN_CLASS_I, "d,s,t",     MATCH_V2DNTT_C_VS, MASK_V2DNTT_C_VS, match_opcode, 0 },
+{"v2dintt_r.vs",0, INSN_CLASS_I, "d,s,t",     MATCH_V2DINTT_R_VS, MASK_V2DINTT_R_VS, match_opcode, 0 },
+{"v2dintt_c.vs",0, INSN_CLASS_I, "d,s,t",     MATCH_V2DINTT_C_VS, MASK_V2DINTT_C_VS, match_opcode, 0 },
 
 //{"v2dsync",     0, INSN_CLASS_I, "d,o(s)",     MATCH_V2DSYNC, MASK_V2DSYNC, match_opcode, 0 },
 
